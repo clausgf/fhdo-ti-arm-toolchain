@@ -10,6 +10,7 @@ RUN apt-get update && apt-get install -y \
     bzip2 \
     curl \
     cppcheck \
+    gcovr \
     doxygen graphviz mscgen plantuml \
     && rm -rf /var/lib/apt/lists/* \
     && curl -SL http://releases.llvm.org/7.0.1/clang+llvm-7.0.1-x86_64-linux-gnu-ubuntu-18.04.tar.xz \
