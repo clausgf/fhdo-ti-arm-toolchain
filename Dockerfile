@@ -23,8 +23,8 @@ RUN export DEBIAN_FRONTEND=noninteractive DEBCONF_NONINTERACTIVE_SEEN=true ; \
     && curl -SL https://developer.arm.com/-/media/Files/downloads/gnu-rm/7-2018q2/gcc-arm-none-eabi-7-2018-q2-update-linux.tar.bz2 --output gcc-arm-none-eabi.tar.bz2 \
     && tar xf gcc-arm-none-eabi.tar.bz2 \
     && rm -rf gcc-arm-none-eabi.tar.bz2 \
-    && rm -rf /gcc-arm-none-eabi-8-2018-q4-major/share/doc \
-    && echo 'export PATH=/gcc-arm-none-eabi-8-2018-q4-major/bin:$PATH' >> ~/.bashrc \
+    && rm -rf /gcc-arm-none-eabi-7-2018-q2-update/share/doc \
+    && echo 'export PATH=/gcc-arm-none-eabi-7-2018-q2-update/bin:$PATH' >> ~/.bashrc \
     && curl -SL https://releases.llvm.org/8.0.0/clang+llvm-8.0.0-x86_64-linux-gnu-ubuntu-18.04.tar.xz | tar -xJC . \
     && mv clang+llvm-8.0.0-x86_64-linux-gnu-ubuntu-18.04 clang \
     && echo 'export PATH=/clang/bin:$PATH' >> ~/.bashrc \
