@@ -13,7 +13,7 @@ RUN export DEBIAN_FRONTEND=noninteractive DEBCONF_NONINTERACTIVE_SEEN=true ; \
     curl \
     cppcheck python-pygments \
     gcovr \
-    doxygen graphviz mscgen plantuml ttf-freefont \
+    doxygen graphviz mscgen plantuml \
     && rm -rf /var/lib/apt/lists/* \
     && ln -snf /usr/share/zoneinfo/$TZ /etc/localtime \
     && echo $TZ > /etc/timezone \
