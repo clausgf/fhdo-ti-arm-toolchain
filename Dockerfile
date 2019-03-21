@@ -21,13 +21,11 @@ RUN export DEBIAN_FRONTEND=noninteractive DEBCONF_NONINTERACTIVE_SEEN=true ; \
     && tar xvf gcc-arm-none-eabi.tar.bz2 \
     && rm -rf gcc-arm-none-eabi.tar.bz2 \
     && rm -rf /gcc-arm-none-eabi-8-2018-q4-major/share/doc \
-    && echo 'export PATH=/gcc-arm-none-eabi-8-2018-q4-major/bin:$PATH' >> ~/.bashrc
-
-#    && curl -SL http://releases.llvm.org/7.0.1/clang+llvm-7.0.1-x86_64-linux-gnu-ubuntu-18.04.tar.xz \
-#    | tar -xJC . \
-#    && mv clang+llvm-7.0.1-x86_64-linux-gnu-ubuntu-18.04 clang_7.0.1 \
-#    && echo 'export PATH=/clang_7.0.1/bin:$PATH' >> ~/.bashrc \
-#    && echo 'export LD_LIBRARY_PATH=/clang_7.0.1/lib:$LD_LIBRARY_PATH' >> ~/.bashrc \
+    && echo 'export PATH=/gcc-arm-none-eabi-8-2018-q4-major/bin:$PATH' >> ~/.bashrc \
+    && curl -SL https://releases.llvm.org/8.0.0/clang+llvm-8.0.0-x86_64-linux-gnu-ubuntu-18.04.tar.xz | tar -xJC . \
+    && mv clang+llvm-8.0.0-x86_64-linux-gnu-ubuntu-18.04 clang \
+    && echo 'export PATH=/clang/bin:$PATH' >> ~/.bashrc \
+    && echo 'export LD_LIBRARY_PATH=/clang/lib:$LD_LIBRARY_PATH' >> ~/.bashrc
 
 WORKDIR /src
 
