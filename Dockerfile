@@ -2,7 +2,8 @@ FROM ubuntu:18.04
 ENV TZ=Europe/Berlin
 ENV PATH="/gcc-arm-none-eabi-8-2018-q4-major/bin:${PATH}"
 
-RUN apt-get update && apt-get install -y \
+RUN export DEBIAN_FRONTEND=noninteractive DEBCONF_NONINTERACTIVE_SEEN=true ; \
+    apt-get update && apt-get install -y \
     tzdata \
     build-essential \
     git \
