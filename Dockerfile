@@ -9,7 +9,7 @@ RUN apt-get update && apt-get install -y \
     xz-utils \
     bzip2 \
     curl \
-    cppcheck \
+    cppcheck python-pygments \
     gcovr \
     doxygen graphviz mscgen plantuml \
     && rm -rf /var/lib/apt/lists/* \
